@@ -133,7 +133,8 @@ const EditBook = () => {
     };
     setLoading(true);
     axios
-      .put(`http://localhost:5555/books/${id}`, data)
+      // .put(`http://localhost:5555/books/${id}`, data)
+      .put(`https://book-verse-backend-yash262003.vercel.app/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Edited successfully', { variant: 'success' });

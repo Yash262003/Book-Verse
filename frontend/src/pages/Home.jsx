@@ -80,7 +80,8 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('http://localhost:5555/books')
+      // .get('http://localhost:5555/books')
+      .get('https://book-verse-backend-yash262003.vercel.app/books')
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);

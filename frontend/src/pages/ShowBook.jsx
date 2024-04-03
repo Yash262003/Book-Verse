@@ -76,7 +76,8 @@ const ShowBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/books/${id}`)
+      // .get(`http://localhost:5555/books/${id}`)
+      .get(`https://book-verse-backend-yash262003.vercel.app/books/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);
